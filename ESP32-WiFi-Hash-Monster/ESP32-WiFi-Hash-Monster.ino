@@ -22,7 +22,7 @@
 // SD : GPIO4=CS(CD/D3), 23=MOSI(CMD), 18=CLK, 19=MISO(D0)
 //--------------------------------------------------------------------
 #include <M5Stack.h>
-#include <M5StackUpdater.h> // https://github.com/tobozo/M5Stack-SD-Updater/
+//#include <M5StackUpdater.h> // https://github.com/tobozo/M5Stack-SD-Updater/
 #include "Free_Fonts.h"
 #include <SPI.h>
 #include "freertos/FreeRTOS.h"
@@ -140,7 +140,7 @@ void setup() {
   // SD Updater support
   if(digitalRead(BUTTON_A_PIN) == 0) {
     Serial.println("Will Load menu binary");
-    updateFromFS(SD);
+//    updateFromFS(SD);
     ESP.restart();
   }
   
